@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #58efec, #e85c90);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+header {
+  font-family: "Shadows Into Light";
+  font-size: 2rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #ffffff;
+}
+
+form input {
+  outline: none;
+  font-family: "Comic Neue";
+}
+
+form button {
+  cursor: pointer;
+  color: #e85c90;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #58efec;
+  color: #ffffff;
+}
+
+.todoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoContainer-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todoContainer-todo {
+  margin: 0.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Comic Neue";
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.todoContainer-item {
+  flex: 1;
+  padding: 0rem 0.5rem;
+}
+
+.todoContainer-completedButton,
+.todoContainer-deleteButton {
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.todoContainer-completedButton {
+  background-color: #54d054;
+}
+
+.todoContainer-deleteButton {
+  background-color: #d15454;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+select {
+  color: #e85c90;
+  width: 10rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-family: "Comic Neue";
+}
+
+.form-select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #e85c90;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-select:hover::after {
+  background-color: #58efec;
+  color: #ffffff;
+}
